@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="plugin/pointer/pointer.css" />
+
+    <link rel="icon" href="images/api-icon.png">
+
+    <title>Obter dados de uma API</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- CAPA -->
+            <section>
+                <h2 style="text-align: right;">
+                    Obter dados de uma API
+                </h2>
+                <hr>
+                <p style="text-align: right;">
+                    Kelvin de Lucca Feltrin
+                </p>
+            </section>
+
+            <!-- TÓPICOS ABORDADOS -->
+            <section>
+                <h3>Tópicos Abordados</h3>
+
+                <ul>
+                    <li><a href="#/2">O que significa API</a></li>
+                    <li>
+                        <a href="#/3">História das APIs</a>
+                    </li>
+                    <li>
+                        <a href="#/4">Como as APIs funcionam</a>
+                    </li>
+                    <li>
+                        <a href="#/5">Quais são os diferentes tipos de API</a>
+                    </li>
+                    <li>
+                        <a href="#/6">O que é um endpoint de API e por que ele é importante</a>
+                    </li>
+                    <li>
+                        <a href="#/7">Como proteger uma API</a>
+                    </li>
+                    <li>
+                        <a href="#/8">Onde posso encontrar novas APIs?</a>
+                    </li>
+                    <li>
+                        <a href="#/9">Exemplo prático - API do ChatGPT</a>
+                    </li>
+                    <li>
+                        <a href="#/10">Referências</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- O QUE SIGNIFICA API -->
+            <section>
+                <section>
+                    <h3>O que significa API</h3><br>
+                    <div style="display: flex; align-items: center; justify-content: space-between">
+                        <ul style="font-size: 30px;">
+                            <li>Application Programming Interface (interface de programação de aplicações)</li><br>
+                            <li>São protocolos para a criação de aplicações de software</li><br>
+                            <li>Conectam serviços sem a necessidade de saber como esses elementos foram implementados</li>
+                        </ul>
+                        <div style="display: flex; flex-direction: column;">
+                            <img src="images/api-definicao.jpg" style="height: 350px; width: 1000px;">
+                            <a href="https://www.freepik.com/free-vector/technology-isometric-api-illustration_25252435.htm#query=api%20integration&position=27&from_view=search&track=ais" style="font-size: 20px; margin: 0; padding: 0;">Image by Freepik</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>O que significa API</h3>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <ul>
+                            <li>Vídeo sugerido:</li>
+                        </ul>
+                        <iframe width="700" height="400" src="https://www.youtube.com/embed/WXsD0ZgxjRw?si=8_FDwqa_3t6QvbPJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </section>
+            </section>
+
+            <!-- HISTÓRIA DAS APIS -->
+            <section>
+                <h3>História das APIs</h3><br>
+                <ul style="font-size: 35px;">
+                    <li>As APIs surgiram antes do computador pessoal</li><br>
+                    <li>Eram normalmente usadas como bibliotecas para sistemas operacionais</li><br>
+                    <li>Embora a API enviasse mensagens entre mainframes em alguns momentos, ela era quase sempre local para os sistemas em que operava</li><br>
+                    <li>No início dos anos 2000, elas estavam se tornando uma tecnologia importante para a integração remota de dados</li>
+                </ul>
+            </section>
+
+            <!-- COMO AS APIS FUNCIONAM -->
+            <section>
+                <section>
+                    <h3>Como as APIs funcionam</h3>
+
+                    <ul>
+                        <li>Funcionam como se fossem contratos</li><br>
+                        <li>Possuem documentações que representam um acordo entre as partes interessadas</li><br>
+                        <li>Uma das partes envia uma solicitação remota estruturada de uma forma específica, isso determinará como a aplicação da outra parte responderá</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Como as APIs funcionam</h3>
+
+                    <div style="display: flex; align-items: center; justify-content: space-around;">
+                        <img src="images/api-arquitetura.jpg" style="width: 400px; height: 500px;">
+                        <ul>
+                            <li>A arquitetura da API geralmente é explicada em termos de cliente e servidor</li><br>
+                            <li>A aplicação que envia a solicitação é chamada de cliente e a aplicação que envia a resposta é chamada de servidor</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Como as APIs funcionam</h3>
+
+                    <ul>
+                        <li>Existem quatro maneiras diferentes pelas quais as APIs podem funcionar, dependendo de quando e por que elas foram criadas:</li><br>
+                        <li>APIs SOAP</li>
+                        <li>APIs RPC</li>
+                        <li>APIs WebSocket</li>
+                        <li>APIs REST</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- QUAIS SÃO OS DIFERENTES TIPOS DE API -->
+            <section>
+                <h3 style="font-size: 50px;">Quais são os diferentes tipos de API</h3><br>
+                <div class="card" style="display: flex;">
+                    <div>
+                        <div class="container">
+                            <h4><b>APIs privadas</b></h4>
+                            <p>São internas de uma empresa e são usadas apenas para conectar sistemas e dados dentro da empresa</p>
+                        </div>
+
+                        <div class="container">
+                            <h4><b>APIs públicas</b></h4>
+                            <p>São abertas ao público e podem ser usadas por qualquer pessoa. Pode ou não haver alguma autorização e custo associado a esses tipos de APIs</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="container">
+                            <h4><b>APIs de parceiros</b></h4>
+                            <p>Estas são acessíveis apenas por desenvolvedores externos autorizados para auxiliar as parcerias entre empresas.</p>
+                        </div>
+
+                        <div class="container">
+                            <h4><b>APIs compostas</b></h4>
+                            <p>Estas combinam duas ou mais APIs distintas para atender a requisitos ou comportamentos complexos do sistema</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- O QUE É UM ENDPOINT DE API E POR QUE ELE É IMPORTANTE -->
+            <section>
+                <h3>O que é um endpoint de API e por que ele é importante</h3>
+
+                <ul>
+                    <li>São os pontos de contato finais no sistema de comunicação da API</li><br>
+                    <li>Incluem URLs de servidores, serviços e outros locais digitais específicos de onde as informações são enviadas e recebidas entre sistemas</li>
+                </ul>
+                <hr>
+                <p>Exemplo de endpoint da api do Twitter:</p>
+                <pre><code>https://api.twitter.com/2/tweets/{id}</code></pre>
+            </section>
+
+            <!-- COMO PROTEGER UMA API -->
+            <section>
+                <h3>Como proteger uma API</h3><br>
+
+                <ul>
+                    <li><b>Tokens de autenticação:</b> autoriza os usuários a fazer a chamada de API</li><br>
+                    <li><b>Chaves de API:</b> verificam o programa ou a aplicação que faz a chamada de API</li>
+                </ul>
+            </section>
+
+            <!-- ONDE POSSO ENCONTRAR NOVAS APIS? -->
+            <section>
+                <h3 style="font-size: 45px;">Onde posso encontrar novas APIs?</h3><br>
+
+                <ul style="font-size: 35px;">
+                    <li><a href="https://rapidapi.com/" target="_blank">RapidAPI</a>: o maior mercado global de APIs com mais de 10.000 públicas e 1 milhão de desenvolvedores ativos no local.</li><br>
+
+                    <li><a href="https://publicapis.dev/" target="_blank">Public APIs</a>: a plataforma agrupa APIs remotas em 40 categorias de nicho, tornando mais fácil navegar e encontrar a API certa para atender às suas necessidades</li><br>
+
+                    <li><a href="https://apislist.com/" target="_blank">APIList</a>: têm listas de mais de 500 APIs Web, juntamente com informações detalhadas sobre como usá-las</li>
+                </ul>
+            </section>
+
+            <!-- EXEMPLO PRÁTICO - API DO CHATGPT -->
+            <section>
+                <section>
+                    <h3>Exemplo prático - API do ChatGPT</h3>
+
+                    <ul>
+                        <li>Você pode interagir com a API por meio de solicitações HTTP de qualquer linguagem de programação</li><br>
+                        <li><a href="https://platform.openai.com/docs/api-reference/completions">Link</a> para a página do Chat Completions API</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Exemplo prático - API do ChatGPT</h3><br>
+                    <ul>
+                        <li>Exemplo de requisição para a API:</li>
+                    </ul>
+                    <img src="images/requisicao-completion-api.png">
+                </section>
+
+                <section>
+                    <h3>Exemplo prático - API do ChatGPT</h3><br>
+
+                    <ul>
+                        <li>É necessário obter a API key, através do <a href="https://platform.openai.com/api-keys">link</a></li>
+                    </ul>
+                    <img src="images/openAI-API-Key.png">
+                </section>
+
+                <section>
+                    <h3>Exemplo prático - API do ChatGPT</h3><br>
+
+                    <ul>
+                        <li>Fazendo a requisição pelo Postman:</li>
+                    </ul>
+
+                    <div class="r-stack">
+                        <img class="fragment" src="images/postman-ChatGPT-requisicao-headers.png">
+                        <img class="fragment" src="images/postman-ChatGPT-requisicao-body.png">
+                        <img class="fragment" src="images/postman-ChatGPT-requisicao-response.png">
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Exemplo prático - API do ChatGPT</h3><br>
+                    <ul>
+                        <li><a href="https://github.com/klfeltrin/ChatGPT_API_CSharp">Link</a> para o projeto em C# da API do ChatGPT</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Exemplo prático - API do ChatGPT</h3>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <ul>
+                            <li>Vídeo sugerido:</li>
+                        </ul>
+                        <iframe width="700" height="400" src="https://www.youtube.com/embed/0uK2xY1gCZc?si=j70A2LU6q2fGxyXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </section>
+            </section>
+
+            <!-- REFERÊNCIAS -->
+            <section>
+                <h3>Referências</h3>
+
+                <ul style="font-size: 30px;">
+                    <li><a href="https://platform.openai.com/docs/api-reference/making-requests">API Reference - OpenAI API</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=WXsD0ZgxjRw">APIs for Beginners 2023 - How to use an API (Full Course / Tutorial)</a></li>
+                    <li><a href="https://www.zenvia.com/blog/apis-entenda-o-que-sao-e-como-funcionam/">APIs: Tudo sobre o que é API, exemplos e importância!</a></li>
+                    <li><a href="https://swagger.io/docs/specification/authentication/bearer-authentication/">Bearer Authentication</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=0uK2xY1gCZc">CHATGPT + DOTNET - Criando uma aplicação para consumir a API do Chat GPT - YouTubee </a></li>
+                    <li><a href="https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces">O que é API? Guia de APIs para iniciantes</a></li>
+                    <li><a href="https://aws.amazon.com/pt/what-is/api/">O que é uma API? – Explicação sobre interfaces de programação de aplicações</a></li>
+                    <li><a href="https://dev.to/drminnaar/rest-api-guide-14n2">REST API Guide - DEV Community</a></li>
+                    <li><a href="https://medium.com/star-gazers/understanding-apis-everything-you-need-to-know-about-apis-b0bf53db6adf">Understanding APIs… Everything you need to know about APIs | by Mohammed Rishard | Star Gazers | Medium</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script src="plugin/zoom/zoom.js "></script>
+    <script src="plugin/mouse-pointer/mouse-pointer.js "></script>
+    <script src="plugin/pointer/pointer.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            margin: 0,
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom, RevealPointer]
+        });
+    </script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</body>
+
+</html>
